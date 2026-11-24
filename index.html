@@ -268,6 +268,34 @@
       font-size: 0.9rem;
     }
     .cta-btn:hover { opacity: 0.92; }
+    .seo-section h2 {
+      font-size: 1.15rem;
+      margin: 0 0 10px;
+      color: var(--text);
+    }
+    .seo-section h3 {
+      font-size: 1rem;
+      margin: 18px 0 6px;
+      color: var(--primary-dark);
+    }
+    .seo-section p, .seo-section li {
+      font-size: 0.92rem;
+      color: #334155;
+      margin: 6px 0;
+    }
+    .faq-item {
+      border-top: 1px solid var(--border);
+      padding: 12px 0;
+    }
+    .faq-item:first-of-type {
+      border-top: none;
+    }
+    .faq-q {
+      font-weight: 700;
+      font-size: 0.96rem;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
     .hidden { display: none; }
     footer {
       text-align: center;
@@ -420,6 +448,100 @@
       <p class="sub">想知道家裡哪台舊電器是吃電怪獸？用計電插座實測瓦數，或升級一級能效家電最快半年就能靠省下的電費回本。（含合作推廣連結）</p>
       <div class="gear-grid" id="gearGrid"></div>
     </section>
+
+    <!-- SEO Guide & FAQ Section -->
+    <article class="card seo-section">
+      <h2>2026 台電電價級距表與省電懶人包</h2>
+      <p>台灣電力公司住宅用電（表燈非營業用）採用「分段累進計費」，用電度數越高、超過級距的部分單價越貴。一般家庭為「兩個月收費一次」，因此雙月帳單的每一段級距度數上限都會乘以 2。</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>單月用電分段（雙月帳單 ×2）</th>
+            <th>夏月（6/1～9/30）</th>
+            <th>非夏月（10/1～5/31）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>120 度以下（雙月 240 度以下）</td><td>1.78 元/度</td><td>1.78 元/度</td></tr>
+          <tr><td>121 ～ 330 度（雙月 241～660 度）</td><td>2.55 元/度</td><td>2.26 元/度</td></tr>
+          <tr><td>331 ～ 500 度（雙月 661～1000 度）</td><td>3.80 元/度</td><td>3.13 元/度</td></tr>
+          <tr><td>501 ～ 700 度（雙月 1001～1400 度）</td><td>5.14 元/度</td><td>4.24 元/度</td></tr>
+          <tr><td>701 ～ 1000 度（雙月 1401～2000 度）</td><td>6.44 元/度</td><td>5.27 元/度</td></tr>
+          <tr><td>1001 度以上（雙月 2001 度以上）</td><td>8.86 元/度</td><td>7.03 元/度</td></tr>
+        </tbody>
+      </table>
+
+      <h3>常見高耗電家電電費比較（以每度 3.5 元估算）</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>家電類型</th>
+            <th>常見功率</th>
+            <th>每日使用</th>
+            <th>每月耗電度數</th>
+            <th>每月約略電費</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>一級能效除濕機（70%運轉）</td><td>180W</td><td>8 小時</td><td>30.2 度</td><td>約 NT$ 106</td></tr>
+          <tr><td>變頻冷暖氣（50%低頻）</td><td>750W</td><td>8 小時</td><td>90.0 度</td><td>約 NT$ 315</td></tr>
+          <tr><td>PTC 陶瓷電暖器（全速）</td><td>1200W</td><td>4 小時</td><td>144.0 度</td><td>約 NT$ 504</td></tr>
+          <tr><td>葉片式電暖器（全速）</td><td>1500W</td><td>4 小時</td><td>180.0 度</td><td>約 NT$ 630</td></tr>
+        </tbody>
+      </table>
+
+      <h3>租屋與家電電費常見問題 (FAQ)</h3>
+      <div class="faq-item">
+        <div class="faq-q">Q1：除濕機開一整天（24 小時）電費要多少錢？</div>
+        <p>以消耗功率 180W 的一級能效除濕機為例，壓縮機並非 24 小時滿載，設定濕度到達後會自動停機或送風（約 70% 運轉比例）：<code>0.18 kW × 24 小時 × 0.7 ≈ 3.02 度/天</code>。若以非夏月平均每度 3.5 元計算，開一整天約 <strong>NT$ 10.6</strong>，比想像中省電許多。</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Q2：房東收一度 5 元或 5.5 元，跟台電實際電費差多少？</div>
+        <p>若單月用電在 330 度以下，台電非夏月平均每度僅約 1.78～2.26 元，房東收一度 5.5 元等於多收超過一倍。你可以使用上方「帳單級距 & 租屋對比」試算工具，直接算出雙月與單月的實際差額。</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Q3：陶瓷電暖器跟葉片式電暖器哪個比較省電？</div>
+        <p>兩者都屬於純電阻式加熱（發熱效率接近 1:1），耗電量主要看標示瓦數與是否具備溫控自動斷電。若只需書桌或床邊局部升溫，選擇較低瓦數或有恆溫感測的 PTC 陶瓷電暖器較不易整晚全速空燒；若要全室恆溫且家中有長輩，則可考慮變頻冷暖氣（熱泵原理），省電效率比傳統電暖器高出 2～3 倍。</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Q4：懷疑家裡有「吃電怪獸」怎麼抓出來？</div>
+        <p>老舊冰箱壓縮機老化、24 小時開機的傳統電熱水瓶、或未拔插頭的待機機上盒常是電費暴增的主因。建議使用有電量統計功能的 <strong>Wi-Fi 智慧計電插座</strong> 輪流插上測量 24 小時實際度數，抓出異常耗電家電。</p>
+      </div>
+    </article>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "除濕機開一整天（24 小時）電費要多少錢？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "以消耗功率 180W 的一級能效除濕機為例，按 70% 實際壓縮機運轉比例計算，一天約耗電 3.02 度。若每度電以 3.5 元計算，開一整天約新台幣 10.6 元。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "房東收一度 5 元或 5.5 元，跟台電實際電費差多少？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "若單月用電在 330 度以下，台電非夏月累進電價每度僅約 1.78 至 2.26 元，與固定一度 5.5 元相比價差超過一倍，可透過上方電費試算器直接算出具體差額。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "陶瓷電暖器跟葉片式電暖器哪個比較省電？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "兩者皆為電阻式加熱，耗電取決於瓦數與溫控機制。局部保暖建議選有恆溫自動斷電的 PTC 陶瓷電暖器；大空間長時間保暖則建議使用變頻冷暖氣，耗電僅傳統電暖器的三分之一左右。"
+          }
+        }
+      ]
+    }
+    </script>
 
     <footer>
       <p>註：本試算表依台灣電力公司住宅表燈非營業用累進電價公式計算，不含流動電費以外之特殊違約金或時間電價方案。實際帳單以台電公司開立為準。</p>
